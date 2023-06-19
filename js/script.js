@@ -7,12 +7,13 @@ function validaCPF(){
     const cpf = limpaFormatacao(cpfFormatado);
 
     if (cpf.length != 11){
-        alert("O CPF deve conter 11 dígitos");
+        mostraResultado('CPF deve conter 11 dígitos','red');
         return false;
     }
 
     if (verificarDigitosRepetidos(cpf)){
         mostraResultado("O CPF não pode conter repetição de digitos","red");
+        return false;
     }
 
     const digito1 = calcularDigitoVerificador(cpf,1);
