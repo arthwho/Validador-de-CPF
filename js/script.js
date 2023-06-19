@@ -1,5 +1,10 @@
+$(document).ready(function() {
+    $('#cpf').inputmask('999.999.999-99');
+    });
+
 function validaCPF(){
-    const cpf = document.getElementById("cpf").value;
+    const cpfFormatado = document.getElementById('cpf').value;
+    const cpf = limpaFormatacao(cpfFormatado);
 
     if (cpf.length != 11){
         alert("O CPF deve conter 11 dígitos");
@@ -15,11 +20,14 @@ function validaCPF(){
 
     if(digito1 && digito2){
         mostraResultado(`O CPF ${cpf} é válido`,"green");
-        alert("O CPF é válido");
     } else {
         mostraResultado(`O CPF ${cpf} é inválido`,"red");
-        alert("O CPF é inválido");
     }
+}
+
+function limpaFormatacao(cpf){
+    cpf = cpf.replace(/\D/g, '');
+    return cpf;
 }
 
 function mostraResultado(text,color){
