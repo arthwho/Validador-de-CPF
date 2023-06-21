@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.container h3{
+    margin-bottom: 1rem;
+}
+
+.body #cpf,#btnValidar{
+    padding: 0.5rem 1rem;
+    border: #f3f3f3 1px solid;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.body #btnValidar:hover{
+    background-color: #75a5cb;
+    color: #f3f3f3;
+}
+
+footer{
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    margin-top: 2rem;
+}
